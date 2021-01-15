@@ -7,9 +7,11 @@ import Header from '../Header/Header';
 
 export default props => (
     <Fragment>
-        <Header/>
-        <main className="content">
-            Main
+        <Header {...props}/>
+        <main className="content container-fluid">
+            <div className="pt-3 mt-3">
+                {props.children}
+            </div>
         </main>
     </Fragment>
 )
