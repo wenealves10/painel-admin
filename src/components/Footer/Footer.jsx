@@ -5,6 +5,9 @@ import './Footer.css';
 
 export default props => (
     <footer className="footer">
-        Footer
+        <span>
+            Desenvolvido com <i className="fa fa-heart text-info"></i> por 
+            <strong> Wene<span className="text-info">Dev</span></strong>
+        </span>
     </footer>
 )
