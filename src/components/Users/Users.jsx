@@ -14,7 +14,7 @@ const headersProps ={
 
 const axiosConfig = {
     headers: {
-        Authorization: `bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsIm5hbWUiOiJUZXN0ZSBUZXN0ZSIsImlhdCI6MTYxMDgwNzQwNCwiZXhwIjoxNjEwOTgwMjA0fQ.RRk7ES13FzAc0G4LVvJLZBijpqtnNFgY8_L9f6X9Byk`
+        Authorization: `bearer ${localStorage.getItem('token') || ''}`
     }
 }
 
@@ -38,7 +38,7 @@ export default class Users extends Component{
         axios(`${baseUrl}users`,axiosConfig).then((result) => {
             this.setState({list: result.data.data})
         }).catch((err) => {
-            alert('Erro');
+            localStorage.removeItem('token');
         });
     }
 
