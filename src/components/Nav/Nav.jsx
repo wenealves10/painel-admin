@@ -6,8 +6,8 @@ import NavItem from '../Nav-Item/NavItem';
 export default props => (
     <aside className="menu-area">
         <nav className="menu">
-        <NavItem icon="home" link="#/" label="Inicío"/>
-        <NavItem icon="users" link="#/users" label="Usuários"/>
+        <NavItem icon="home" link="/" label="Inicío"/>
+        <NavItem icon="users" link="/users" label="Usuários"/>
         </nav>
     </aside>
 )
